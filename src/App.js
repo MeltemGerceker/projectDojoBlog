@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+/*
+Tutorial: https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=1
+*/
 import './App.css';
+import Navbar from './components/Navbar/Navbar.js';
+import Home from './components/Home/Home.js';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Create from './components/Create/Create';
+import BlogDetails from './components/BlogDetails/BlogDetails';
+import NotFound from './components/NotFound/NotFound';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar/>
+      
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+            <Route exact path="/create">
+              <Create/>
+            </Route>
+            <Route exact path="/blogs/:id">
+              <BlogDetails/>
+            </Route>
+            <Route path="*">
+              <NotFound/>
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

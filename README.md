@@ -1,4 +1,18 @@
 # Getting Started with Create React App
+<h1>Dojo Blog</h1>
+<p>This is a simple Blog application developed by React.</p>
+<p>Tutorial: <a href="https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=1">The Net Ninja's Full React Tutorial</a></p>
+<h2>Technologies</h2>
+<ul>
+    <li>HTML5</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>React</li>
+</ul>
+
+<h3>Screenshot</h3>
+
+![](screenRecording.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
